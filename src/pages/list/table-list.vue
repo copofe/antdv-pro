@@ -247,7 +247,7 @@ const expand = ref(false)
 
 <template>
   <page-container>
-    <a-card mb-4>
+    <a-card class="!mb-4">
       <a-form :label-col="{ span: 7 }" :model="formModel">
         <a-row :gutter="[15, 0]">
           <a-col :span="8">

@@ -86,8 +86,7 @@ onUnmounted(() => {
     ref="tabsRef"
     :active-key="activeKey"
     :style="tabStyle"
-    class="bg-white dark:bg-#242525 w-100% pro-ant-multi-tab"
-    pt-10px
+    class="bg-white dark:bg-[#242525] w-full pro-ant-multi-tab !pt-2"
     type="card"
     size="small"
     :tab-bar-gutter="5"
@@ -100,7 +99,7 @@ onUnmounted(() => {
             {{ item.locale ? $t(item.locale) : item.title }}
             <button
               v-if="activeKey === item.fullPath"
-              class="ant-tabs-tab-remove"
+              class="ant-tabs-tab-remove pl-2"
               style="margin: 0"
               @click.stop="multiTabStore.refresh(item.fullPath)"
             >
@@ -108,7 +107,7 @@ onUnmounted(() => {
             </button>
             <button
               v-if="!item.affix && list.length > 1"
-              class="ant-tabs-tab-remove"
+              class="ant-tabs-tab-remove pl-2"
               style="margin: 0"
               @click.stop="multiTabStore.close(item.fullPath)"
             >
@@ -155,12 +154,12 @@ onUnmounted(() => {
       </template>
     </a-tab-pane>
     <template #leftExtra>
-      <div class="w-24px" />
+      <div class="w-6" />
     </template>
     <template #rightExtra>
-      <div class="w-48px flex item-center justify-center">
+      <div class="w-12 flex item-center justify-center">
         <a-dropdown :trigger="['hover']">
-          <MoreOutlined class="text-16px" />
+          <MoreOutlined class="text-base" />
           <template #overlay>
             <a-menu @click="handleSwitch($event, activeKey)">
               <a-menu-item
@@ -187,6 +186,8 @@ onUnmounted(() => {
   .ant-tabs-nav-operations {
     display: none !important;
   }
-
+  .ant-tabs-nav {
+    margin-bottom: 8px !important;
+  }
 }
 </style>

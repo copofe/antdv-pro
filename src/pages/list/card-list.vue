@@ -42,7 +42,7 @@ const data = ref([
     <div class="mt-2">
       <a-row :gutter="16">
         <a-col :xs="16" :sm="8" :md="6" :lg="6" :xl="6" class="mb-4">
-          <a-button class="w-1/1 h-204px" type="dashed">
+          <a-button class="block w-full !h-full" type="dashed">
             +新增产品
           </a-button>
         </a-col>
@@ -57,14 +57,14 @@ const data = ref([
           >
             <template #default>
               <div class="flex h-27">
-                <div class="w-10 h-10 bg-gray-300 rounded-full">
+                <div class="w-10 h-10 bg-gray-300 rounded-full flex-shrink-0">
                   <img class="w-10 h-10 rounded-full" :src="item.link">
                 </div>
-                <div class="ml">
-                  <div style="font-size: 18px; font-weight: 500;">
+                <div class="ml-4">
+                  <div class="text-lg font-medium">
                     {{ item.title }}
                   </div>
-                  <div class="h-17 overflow-hidden overflow">
+                  <div class="h-17 overflow-hidden line-clamp-3">
                     {{ content }}
                   </div>
                 </div>
@@ -80,12 +80,3 @@ const data = ref([
     </div>
   </page-container>
 </template>
-
-<style scoped>
-.overflow {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
-}
-</style>

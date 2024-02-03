@@ -50,7 +50,7 @@ const contentCls = computed(() => {
     cls.push('w-full')
 
   else if (contentWidth.value === 'Fixed')
-    cls.push(...['max-w-1200px w-1200px', 'mx-auto'])
+    cls.push(...['max-w-[1200px] w-[1200px]', 'mx-auto'])
 
   return cls
 })
@@ -64,7 +64,7 @@ function renderTitle(title: VNodeChild | (() => VNodeChild)) {
 
 <template>
   <div class="ant-pro-page-container">
-    <div class="bg-[var(--bg-color)]" :class="layoutSetting.multiTab ? 'pb-16px' : 'py-16px'" px-24px mb-24px mx--24px mt--24px>
+    <div class="bg-[var(--bg-color)] px-6 mb-6 -mx-6 -mt-6" :class="layoutSetting.multiTab ? 'pb-4 pt-2' : 'py-4'">
       <a-breadcrumb v-if="!currentItem.hideInBreadcrumb">
         <template v-if="currentItem.matched?.length">
           <a-breadcrumb-item v-for="item in currentItem.matched" :key="item.path">
@@ -75,22 +75,22 @@ function renderTitle(title: VNodeChild | (() => VNodeChild)) {
           {{ renderTitle(currentItem.title) }}
         </a-breadcrumb-item>
       </a-breadcrumb>
-      <div flex mt-8px justify-between>
-        <div flex items-center my-4px of-hidden>
+      <div class="flex mt-2 justify-between">
+        <div class="flex items-center my-1 of-hidden">
           <slot name="title">
-            <span text-20px line-height-32px mr-12px mb-0 truncate font-600>{{ renderTitle(title ?? currentItem.title) }}</span>
+            <span class="text-xl line-height-8 mr-3 mb-0 truncate font-semibold">{{ renderTitle(title ?? currentItem.title) }}</span>
           </slot>
         </div>
         <div>
           <slot name="extra" />
         </div>
       </div>
-      <div v-if="$slots.content || $slots.extraContent" pt-12px>
-        <div flex w-full>
-          <div flex-auto>
+      <div v-if="$slots.content || $slots.extraContent" class="pt-3">
+        <div class="flex w-full">
+          <div class="flex-auto">
             <slot name="content" />
           </div>
-          <div flex-shrink-0>
+          <div class="flex-shrink-0">
             <slot name="extraContent" />
           </div>
         </div>

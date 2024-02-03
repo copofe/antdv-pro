@@ -25,7 +25,7 @@ const { t } = useI18n()
       </a-radio-group>
     </a-col>
   </a-row>
-  <a-card :bordered="false" class="my-5">
+  <a-card :bordered="false" class="my-5 shadow-none">
     <a-row>
       <a-col :span="8">
         <div>

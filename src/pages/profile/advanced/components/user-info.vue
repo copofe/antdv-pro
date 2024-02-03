@@ -5,7 +5,7 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <a-card :bordered="false" class="my-6">
+  <a-card :bordered="false">
     <a-descriptions :title="t('profile.basic.customerInfoTitle')">
       <a-descriptions-item :label="t('profile.basic.customerName')">
         张三
@@ -81,7 +81,3 @@ const { t } = useI18n()
     </a-card>
   </a-card>
 </template>
-
-<style scoped lang="less">
-
-</style>

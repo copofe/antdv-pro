@@ -29,8 +29,8 @@ async function handleClick({ key }: any) {
 
 <template>
   <a-dropdown>
-    <span hover="bg-[var(--hover-color)]" flex items-center h-48px px-12px cursor-pointer class="transition-all-300">
-      <a-avatar :src="avatar" mr-8px size="small" />
+    <span hover="bg-[var(--hover-color)]" class="transition-all-300 flex items-center h-12 cursor-pointer">
+      <a-avatar :src="avatar" size="small" class="!mr-2" />
       <span class="anticon">{{ nickname }}</span>
     </span>
     <template #overlay>

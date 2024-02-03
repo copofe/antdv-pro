@@ -311,9 +311,9 @@ const list = [
 </script>
 
 <template>
-  <div>
+  <div class="flex flex-col gap-4">
     <Category />
-    <a-list :data-source="list" :grid="{ gutter: 16, xs: 1, sm: 2, md: 4, lg: 4, xl: 4, xxl: 4 }" class="mt-4">
+    <a-list :data-source="list" :grid="{ gutter: 16, xs: 1, sm: 2, md: 4, lg: 4, xl: 4, xxl: 4 }">
       <template #renderItem="{ item }">
         <a-list-item style="padding: 0">
           <a-card hoverable>

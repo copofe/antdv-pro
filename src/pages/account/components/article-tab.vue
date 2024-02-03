@@ -32,12 +32,12 @@ const { t } = useI18n()
           </div>
           <div class="flex items-center">
             <span class="flex items-center">
-              <a-avatar :size="20" class="mr-2">
+              <a-avatar :size="20">
                 <template #icon>
                   <img src="/logo.svg" alt="">
                 </template>
               </a-avatar>
-              <span style="color: rgb(22, 119, 255);">
+              <span class="mx-1" style="color: rgb(22, 119, 255);">
                 张三
               </span>
             </span>

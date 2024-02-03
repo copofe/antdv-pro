@@ -193,14 +193,12 @@ onMounted(() => {
     </a-card>
 
     <!-- 列表 -->
-    <a-card class="mt-5">
+    <a-card class="!mt-4">
       <template #title>
         <a-card :bordered="false">
-          <a-row style="font-weight: normal;">
-            <a-col :span="14">
-              <span>基本列表</span>
-            </a-col>
-            <a-col :span="10" class="flex">
+          <div class="flex justify-between items-center">
+            <span>基本列表</span>
+            <div class="flex gap-2">
               <div>
                 <a-radio-group v-model:value="radioValue">
                   <a-radio-button value="a">
@@ -214,7 +212,7 @@ onMounted(() => {
                   </a-radio-button>
                 </a-radio-group>
               </div>
-              <div class="ml-5">
+              <div class="ml-1">
                 <a-input-search
                   v-model:value="searchValue"
                   placeholder="请输入"
@@ -222,8 +220,8 @@ onMounted(() => {
                   @search="onSearch"
                 />
               </div>
-            </a-col>
-          </a-row>
+            </div>
+          </div>
         </a-card>
       </template>
       <!-- 列表主体 -->
@@ -337,6 +335,6 @@ onMounted(() => {
 .a-extra {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
 }
 </style>

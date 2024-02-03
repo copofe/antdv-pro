@@ -11,9 +11,11 @@ import logCard from './log-card.vue'
     <template #content>
       <header-info />
     </template>
-    <step-card />
-    <user-info-card />
-    <phone-data-card />
-    <log-card />
+    <div class="flex flex-col gap-4">
+      <step-card />
+      <user-info-card />
+      <phone-data-card />
+      <log-card />
+    </div>
   </page-container>
 </template>

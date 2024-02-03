@@ -13,26 +13,18 @@ export interface ResponseBody<T = any> {
 
 export interface RequestConfigExtra {
   token?: boolean
-  customDev?: boolean
+  ['x-mock']?: 'true' | 'false'
   loading?: boolean
 }
 const instance: AxiosInstance = axios.create({
-  baseURL: import.meta.env.VITE_APP_BASE_API ?? '/',
+  baseURL: `${import.meta.env.DEV ? '' : import.meta.env.VITE_API_BASE_URL}/api`,
   timeout: 60000,
   headers: { 'Content-Type': ContentTypeEnum.JSON },
 })
 const axiosLoading = new AxiosLoading()
 async function requestHandler(config: InternalAxiosRequestConfig & RequestConfigExtra): Promise<InternalAxiosRequestConfig> {
-  // 处理请求前的url
-  if (
-    import.meta.env.DEV
-      && import.meta.env.VITE_APP_BASE_API_DEV
-      && import.meta.env.VITE_APP_BASE_URL_DEV
-      && config.customDev
-  ) {
-    //  替换url的请求前缀baseUrl
-    config.baseURL = import.meta.env.VITE_APP_BASE_API_DEV
-  }
+  if (import.meta.env.DEV && import.meta.env.VITE_MOCK_ENABLE === 'true' && import.meta.env.VITE_MOCK_GLOBAL === 'true')
+    config.headers['x-mock'] = import.meta.env.VITE_MOCK_GLOBAL
   const token = useAuthorization()
 
   if (token.value && config.token !== false)

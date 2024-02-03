@@ -49,7 +49,3 @@ const { t } = useI18n()
     </a-steps>
   </a-card>
 </template>
-
-<style scoped lang="less">
-
-</style>

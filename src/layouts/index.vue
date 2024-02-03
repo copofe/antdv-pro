@@ -56,13 +56,15 @@ const layoutProps = computed(() =>
     @update:collapsed="appStore.toggleCollapsed"
   >
     <template #headerActions>
-      <UserAvatar />
-      <SelectLang />
-      <GithubLink />
-      <template v-if="!isMobile">
-        <GiteeLink />
-        <DocLink />
-      </template>
+      <div class="flex items-center gap-6">
+        <UserAvatar />
+        <SelectLang />
+        <GithubLink />
+        <template v-if="!isMobile">
+          <GiteeLink />
+          <DocLink />
+        </template>
+      </div>
     </template>
     <template #contentPrefix>
       <MultiTab v-if="layoutSetting.multiTab" />
@@ -70,7 +72,7 @@ const layoutProps = computed(() =>
 
     <template #renderFooterLinks />
 
-    <a-watermark h-full flex flex-col flex-1 :content="!layoutSetting.watermark ? '' : layoutSetting.title ?? 'Antdv Pro'">
+    <a-watermark class="h-full flex flex-col flex-1" :content="!layoutSetting.watermark ? '' : layoutSetting.title ?? 'Antdv Pro'">
       <RouterView>
         <template #default="{ Component }">
           <component :is="Component" />

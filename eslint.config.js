@@ -1,6 +1,6 @@
-import mist from '@antfu/eslint-config'
+import config from '@antfu/eslint-config'
 
-export default mist({
+export default config({
   vue: true,
   vueJsx: false,
   typescript: true,

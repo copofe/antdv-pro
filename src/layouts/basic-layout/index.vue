@@ -58,8 +58,8 @@ const contentCls = computed(() => {
           </Header>
         </template>
         <slot name="contentPrefix" />
-        <a-layout-content class="ant-pro-basicLayout-content" flex flex-col>
-          <div h-full flex flex-col flex-1 :class="contentCls">
+        <a-layout-content class="ant-pro-basicLayout-content flex flex-col">
+          <div class="h-full flex flex-col flex-1" :class="contentCls">
             <slot />
           </div>
         </a-layout-content>

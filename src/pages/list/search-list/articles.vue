@@ -201,9 +201,9 @@ function formatTimer(timer: number | string) {
 </script>
 
 <template>
-  <div>
+  <div class="flex flex-col gap-4">
     <Category />
-    <a-card :bordered="false" class="mt-4">
+    <a-card :bordered="false">
       <a-list :data-source="list" item-layout="vertical">
         <template #renderItem="{ item }">
           <a-list-item :key="item.id">

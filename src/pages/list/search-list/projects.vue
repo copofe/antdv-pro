@@ -310,9 +310,9 @@ const list = [
 </script>
 
 <template>
-  <div>
+  <div class="flex flex-col gap-4">
     <Category />
-    <div class="mt-4">
+    <div>
       <a-list :data-source="list" :grid="{ gutter: 16, xs: 1, sm: 2, md: 4, lg: 4, xl: 4, xxl: 4 }">
         <template #renderItem="{ item }">
           <a-list-item style="padding: 0">
@@ -322,7 +322,7 @@ const list = [
               </template>
               <a-card-meta :title="item.title">
                 <template #description>
-                  <div class="h-44px">
+                  <div class="h-11">
                     <a-typography-paragraph
                       :ellipsis="{ rows: 2 }"
                       :content="item.subDescription"
@@ -330,7 +330,7 @@ const list = [
                   </div>
                 </template>
               </a-card-meta>
-              <div class="flex h-20px mt-16px mb--4px line-height-20px justify-between">
+              <div class="flex h-4 mt-4 -mb-1 line-height-5 justify-between">
                 <span c-text-tertiary>19 分钟前</span>
                 <div>
                   <!--                  -->

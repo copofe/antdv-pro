@@ -10,10 +10,12 @@ useLayoutMenuProvide(layoutMenu, appStore)
 
 <template>
   <a-config-provider :theme="theme" :locale="antd">
-    <a-app class="h-full font-chinese antialiased">
-      <TokenProvider>
-        <RouterView />
-      </TokenProvider>
-    </a-app>
+    <a-style-provider hash-priority="high">
+      <a-app class="h-full font-chinese antialiased">
+        <TokenProvider>
+          <RouterView />
+        </TokenProvider>
+      </a-app>
+    </a-style-provider>
   </a-config-provider>
 </template>

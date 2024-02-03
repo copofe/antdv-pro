@@ -69,7 +69,7 @@ function handleEdit(record: CrudTableModel) {
 
 <template>
   <page-container>
-    <a-card mb-4>
+    <a-card class="!mb-4">
       <a-form class="system-crud-wrapper" :label-col="{ span: 7 }" :model="state.queryParams">
         <a-row :gutter="[15, 0]">
           <a-col :span="6">

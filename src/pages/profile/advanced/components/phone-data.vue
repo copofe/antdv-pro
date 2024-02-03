@@ -74,7 +74,3 @@ function removeItem(item: PhoneItem) {
     </a-list>
   </a-card>
 </template>
-
-<style scoped lang="less">
-
-</style>

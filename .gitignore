@@ -31,7 +31,6 @@ docs/.vitepress/cache
 *.log*
 .nitro
 .cache
-.mist
 .output
 
 types/components.d.ts

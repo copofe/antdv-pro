@@ -137,8 +137,8 @@ const teamData = ref<ITeamDataItem[]>([
               {{ t('account.cneter.team') }}
             </p>
             <div class="flex flex-wrap justify-between">
-              <span v-for="(item, index) in teamData" :key="index" class="flex items-center w-120px mb-5">
-                <a-avatar :size="26" class="mr-2">
+              <span v-for="(item, index) in teamData" :key="index" class="flex items-center mt-2">
+                <a-avatar :size="26" class="!mr-2">
                   <template #icon>
                     <img :src="item.link" alt="">
                   </template>

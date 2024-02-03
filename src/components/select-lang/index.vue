@@ -7,7 +7,7 @@ function handleClick({ key }: any) {
 
 <template>
   <a-dropdown>
-    <span hover="bg-[var(--hover-color)]" flex items-center h-48px px-12px text-16px cursor-pointer class="transition-all-300">
+    <span hover="bg-[var(--hover-color)]" class="transition-all-300 flex items-center h-12 cursor-pointer">
       <CarbonLanguage class="anticon" />
     </span>
     <template #overlay>

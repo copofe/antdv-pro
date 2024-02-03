@@ -77,7 +77,7 @@ function getI18n(key: any) {
 </script>
 
 <template>
-  <a-card class="my-6">
+  <a-card>
     <a-tabs v-model:activeKey="activeKey">
       <a-tab-pane key="1" :tab="t('profile.advanced.log')">
         <a-table :data-source="data" :columns="columns">

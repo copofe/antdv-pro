@@ -1,26 +1,42 @@
 /// <reference types="vitest" />
+
 import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import * as process from 'node:process'
-import { loadEnv } from 'vite'
-import type { ConfigEnv, UserConfig } from 'vite'
-import { createVitePlugins } from './plugins'
-import { OUTPUT_DIR } from './plugins/constants'
+import { defineConfig, loadEnv } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import AntdvResolver from 'antdv-component-resolver'
 
 const baseSrc = fileURLToPath(new URL('./src', import.meta.url))
 // https://vitejs.dev/config/
-export default ({ mode }: ConfigEnv): UserConfig => {
-  const env = loadEnv(mode, process.cwd())
-  const proxyObj = {}
-  if (mode === 'development' && env.VITE_APP_BASE_API_DEV && env.VITE_APP_BASE_URL_DEV) {
-    proxyObj[env.VITE_APP_BASE_API_DEV] = {
-      target: env.VITE_APP_BASE_URL_DEV,
-      changeOrigin: true,
-      rewrite: path => path.replace(new RegExp(`^${env.VITE_APP_BASE_API_DEV}`), ''),
-    }
-  }
+export default defineConfig(({ mode }) => {
+  const ENV = loadEnv(mode, process.cwd())
+  const mockEnable = ENV.VITE_MOCK_ENABLE === 'true'
+
   return {
-    plugins: createVitePlugins(env),
+    plugins: [
+      vue(),
+      vueJsx(),
+      AutoImport({
+        imports: [
+          'vue',
+          'vue-router',
+          'vue-i18n',
+          '@vueuse/core',
+          'pinia',
+        ],
+        dts: 'types/auto-imports.d.ts',
+        dirs: ['src/stores', 'src/composables'],
+      }),
+      Components({
+        resolvers: [AntdvResolver()],
+        dts: 'types/components.d.ts',
+        dirs: ['src/components'],
+      }),
+    ],
     resolve: {
       alias: [
         {
@@ -79,7 +95,6 @@ export default ({ mode }: ConfigEnv): UserConfig => {
     },
     build: {
       chunkSizeWarningLimit: 4096,
-      outDir: OUTPUT_DIR,
       rollupOptions: {
         output: {
           manualChunks: {
@@ -94,14 +109,7 @@ export default ({ mode }: ConfigEnv): UserConfig => {
       port: 6678,
       host: '0.0.0.0',
       proxy: {
-        ...proxyObj,
-        // [env.VITE_APP_BASE_API]: {
-        //   target: env.VITE_APP_BASE_URL,
-        // //   如果你是https接口，需要配置这个参数
-        // //   secure: false,
-        //   changeOrigin: true,
-        //   rewrite: path => path.replace(new RegExp(`^${env.VITE_APP_BASE_API}`), ''),
-        // },
+        '/api': mockEnable ? ENV.VITE_MOCK_SERVER : ENV.VITE_API_BASE_URL,
       },
     },
     test: {
@@ -109,4 +117,4 @@ export default ({ mode }: ConfigEnv): UserConfig => {
       environment: 'jsdom',
     },
   }
-}
+})
