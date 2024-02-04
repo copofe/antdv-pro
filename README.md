@@ -4,8 +4,6 @@
 
 </div>
 
-<hr />
-
 分叉自 [antdv-pro](https://github.com/antdv-pro/antdv-pro)，具体使用请查看源项目。
 
 ## 改动
