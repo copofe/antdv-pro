@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "vite",
     "dev:mock": "run-p server dev",
-    "server": "nitro dev --port 8080",
+    "server": "nitro dev --dir servers --port 8080",
     "build": "vue-tsc && vite build",
     "lint:fix": "eslint src --fix",
     "typecheck": "vue-tsc --noEmit",
