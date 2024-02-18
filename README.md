@@ -1,7 +1,8 @@
-<div align="center"> <a href="https://github.com/antdv-pro/antdv-pro"> <img alt="VbenAdmin Logo" width="200" height="200" src="./public/logo.svg"> </a> <br> <br>
-
-<h1>Antdv Pro</h1>
-
+<div align="center">
+  <a href="https://github.com/antdv-pro/antdv-pro">
+    <img alt="Antdv Logo" width="200" height="200" src="./public/logo.svg">
+  </a>
+  <h1>Antdv Pro</h1>
 </div>
 
 分叉自 [antdv-pro](https://github.com/antdv-pro/antdv-pro)，具体使用请查看源项目。
@@ -12,7 +13,7 @@
 - Mock 服务以其它方式实现，依然由 Nitro 作为服务端
 - 替换 Uno CSS 为 Tailwind CSS
 - 删除了部分脚本命令
-- 换行符改为LF
+- 换行符改为 LF
 
 感谢 antdv-pro 成员的贡献
 
