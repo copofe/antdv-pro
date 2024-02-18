@@ -11,7 +11,3 @@ defineOptions({
     <slot />
   </SearchListContainer>
 </template>
-
-<style scoped lang="less">
-
-</style>

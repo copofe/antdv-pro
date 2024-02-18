@@ -1,4 +1,4 @@
-import type { LayoutSetting } from '~@/stores/app'
+import type { LayoutSetting } from '::/stores/app'
 
 export default {
   title: 'Antdv Pro',

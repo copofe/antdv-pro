@@ -6,7 +6,7 @@ import {
   ReloadOutlined,
 } from '@ant-design/icons-vue'
 import type { RouteLocationNormalized } from 'vue-router'
-import { listenerRouteChange, removeRouteListener } from '~@/utils/route-listener'
+import { listenerRouteChange, removeRouteListener } from '::/utils/route-listener'
 
 const multiTabStore = useMultiTab()
 const { list, activeKey } = storeToRefs(multiTabStore)

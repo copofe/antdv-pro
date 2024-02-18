@@ -23,10 +23,7 @@
     // paths
     "baseUrl": ".",
     "paths": {
-      "~@/*": ["src/*"],
-      "~/*": ["src/*"],
-      "@/*": ["src/*"],
-      "~#/*": ["src/enums/*"],
+      "::/*": ["src/*"],
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "types/**/*.d.ts"],

@@ -66,7 +66,3 @@ function seti18n(key: string) {
     </a-row>
   </a-card>
 </template>
-
-<style scoped lang="less">
-
-</style>

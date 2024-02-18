@@ -23,7 +23,3 @@ const { t } = useI18n()
     </a-col>
   </a-row>
 </template>
-
-<style scoped lang="less">
-
-</style>

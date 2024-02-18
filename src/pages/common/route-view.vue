@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ParentCompConsumer } from '@/layouts/basic-layout/parent-comp-consumer'
+import { ParentCompConsumer } from '::/layouts/basic-layout/parent-comp-consumer'
 
 const appStore = useAppStore()
 const { layoutSetting } = storeToRefs(appStore)

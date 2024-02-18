@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { AlipayCircleFilled, LockOutlined, MobileOutlined, TaobaoCircleFilled, UserOutlined, WeiboCircleFilled } from '@ant-design/icons-vue'
 import { AxiosError } from 'axios'
-import GlobalLayoutFooter from '~/layouts/components/global-footer/index.vue'
-import { loginApi } from '~/api/common/login'
-import { getQueryParam } from '~/utils/tools'
-import type { LoginMobileParams, LoginParams } from '~@/api/common/login'
+import GlobalLayoutFooter from '::/layouts/components/global-footer/index.vue'
+import { loginApi } from '::/api/common/login'
+import { getQueryParam } from '::/utils/tools'
+import type { LoginMobileParams, LoginParams } from '::/api/common/login'
 
 const message = useMessage()
 const notification = useNotification()

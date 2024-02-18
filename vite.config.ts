@@ -1,6 +1,5 @@
 /// <reference types="vitest" />
 
-import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import * as process from 'node:process'
 import { defineConfig, loadEnv } from 'vite'
@@ -76,20 +75,8 @@ export default defineConfig(({ mode }) => {
           replacement: 'lodash-es',
         },
         {
-          find: '~@',
+          find: '::',
           replacement: baseSrc,
-        },
-        {
-          find: '~',
-          replacement: baseSrc,
-        },
-        {
-          find: '@',
-          replacement: baseSrc,
-        },
-        {
-          find: '~#',
-          replacement: resolve(baseSrc, './enums'),
         },
       ],
     },
@@ -107,7 +94,6 @@ export default defineConfig(({ mode }) => {
     },
     server: {
       port: 6678,
-      host: '0.0.0.0',
       proxy: {
         '/api': mockEnable ? ENV.VITE_MOCK_SERVER : ENV.VITE_API_BASE_URL,
       },

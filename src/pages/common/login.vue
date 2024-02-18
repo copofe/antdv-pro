@@ -2,11 +2,11 @@
 import { AlipayCircleFilled, LockOutlined, MobileOutlined, TaobaoCircleFilled, UserOutlined, WeiboCircleFilled } from '@ant-design/icons-vue'
 import { delayTimer } from '@v-c/utils'
 import { AxiosError } from 'axios'
-import GlobalLayoutFooter from '~/layouts/components/global-footer/index.vue'
-import { loginApi } from '~/api/common/login'
-import { getQueryParam } from '~/utils/tools'
-import type { LoginMobileParams, LoginParams } from '~@/api/common/login'
-import pageBubble from '@/utils/page-bubble'
+import GlobalLayoutFooter from '::/layouts/components/global-footer/index.vue'
+import { loginApi } from '::/api/common/login'
+import { getQueryParam } from '::/utils/tools'
+import type { LoginMobileParams, LoginParams } from '::/api/common/login'
+import pageBubble from '::/utils/page-bubble'
 
 const message = useMessage()
 const notification = useNotification()
@@ -148,7 +148,7 @@ onBeforeUnmount(() => {
         <div class="box-border flex min-h-[520px]">
           <!-- 登录框左侧 -->
           <div class="ant-pro-form-login-main-left min-h-[520px] flex-center  bg-[var(--bg-color-container)]">
-            <img src="@/assets/images/login-left.png" class="h-5/6 w-5/6">
+            <img src="::/assets/images/login-left.png" class="h-5/6 w-5/6">
           </div>
           <a-divider m-0 type="vertical" class="ant-pro-login-divider  min-h-[520px]" />
           <!-- 登录框右侧 -->

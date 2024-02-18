@@ -7,7 +7,3 @@ import { ReadOutlined } from '@ant-design/icons-vue'
     <ReadOutlined />
   </a>
 </template>
-
-<style scoped lang="less">
-
-</style>

@@ -2,18 +2,18 @@
 import { isFunction } from '@v-c/utils'
 import type { VNodeChild } from 'vue'
 import { useLayoutMenuInject } from './context.ts'
-import { useLayoutState } from '~/layouts/basic-layout/context'
+import { useLayoutState } from '::/layouts/basic-layout/context'
 
 defineProps<{
   title?: string
 }>()
 defineSlots<{
-  default(props: any): any
-  title(props: any): any
-  content(props: any): any
-  extraContent(props: any): any
-  extra(props: any): any
-  footer(props: any): any
+  default: (props: any) => any
+  title: (props: any) => any
+  content: (props: any) => any
+  extraContent: (props: any) => any
+  extra: (props: any) => any
+  footer: (props: any) => any
 }>()
 const { layoutMenu: layoutMenuStore, appStore } = useLayoutMenuInject()
 const { layoutSetting } = storeToRefs(appStore)

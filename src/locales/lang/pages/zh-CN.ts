@@ -51,7 +51,7 @@ export default {
   'profile.basic.paymentStatus': '支付状态',
 
   // 高级详细页
-  'profile.advanced.creater': '创建人',
+  'profile.advanced.creator': '创建人',
   'profile.advanced.create-time': '创建时间',
   'profile.advanced.create-effective-date': '生效日期',
   'profile.advanced.create-product': '产品',
@@ -143,7 +143,7 @@ export default {
   'form.basic-form.verification-code.placeholder': '验证码',
   // 个人页
   'account.center.tags': '标签',
-  'account.cneter.team': '团队',
+  'account.center.team': '团队',
   'account.center.article': '文章',
   'account.center.application': '应用',
   'account.center.project': '项目',

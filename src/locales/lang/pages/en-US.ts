@@ -50,7 +50,7 @@ export default {
   'profile.basic.paymentAmount': 'Payment Amount',
   'profile.basic.paymentStatus': 'Payment Status',
 
-  'profile.advanced.creater': 'Creator',
+  'profile.advanced.creator': 'Creator',
   'profile.advanced.create-time': 'Creation time',
   'profile.advanced.create-effective-date': 'effective date',
   'profile.advanced.create-product': 'product',
@@ -145,7 +145,7 @@ export default {
   'form.basic-form.verification-code.placeholder': 'Verification code',
   // account page
   'account.center.tags': 'tags',
-  'account.cneter.team': 'team',
+  'account.center.team': 'team',
   'account.center.article': 'article',
   'account.center.application': 'application',
   'account.center.project': 'project',

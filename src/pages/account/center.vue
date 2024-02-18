@@ -134,7 +134,7 @@ const teamData = ref<ITeamDataItem[]>([
           </div>
           <div class="mt-10">
             <p>
-              {{ t('account.cneter.team') }}
+              {{ t('account.center.team') }}
             </p>
             <div class="flex flex-wrap justify-between">
               <span v-for="(item, index) in teamData" :key="index" class="flex items-center mt-2">
@@ -156,7 +156,3 @@ const teamData = ref<ITeamDataItem[]>([
     </a-row>
   </div>
 </template>
-
-<style scoped lang="less">
-
-</style>

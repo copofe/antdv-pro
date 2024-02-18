@@ -30,7 +30,7 @@ const { t } = useI18n()
       <a-col :span="8">
         <div>
           <p>
-            {{ t('profile.advanced.creater') }}: windlil
+            {{ t('profile.advanced.creator') }}: windlil
           </p>
           <p>
             {{ t('profile.advanced.create-time') }}: 2020-12-12

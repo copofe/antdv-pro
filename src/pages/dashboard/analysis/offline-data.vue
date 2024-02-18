@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import NumberInfo from '~/pages/dashboard/analysis/number-info.vue'
-import CustomRingProgress from '~/pages/dashboard/analysis/components/custom-ring-progress.vue'
-import CustomLine from '~/pages/dashboard/analysis/components/custom-line.vue'
+import NumberInfo from '::/pages/dashboard/analysis/number-info.vue'
+import CustomRingProgress from '::/pages/dashboard/analysis/components/custom-ring-progress.vue'
+import CustomLine from '::/pages/dashboard/analysis/components/custom-line.vue'
 
 defineProps({
   loading: {
@@ -293,28 +293,23 @@ const offlineChartData = [
 
 <style scoped lang="less">
 .offlineCard {
-
-    :deep(.ant-tabs-ink-bar) {
-      bottom: auto;
-    }
+  :deep(.ant-tabs-ink-bar) {
+    bottom: auto;
+  }
   :deep(.ant-tabs-bar) {
-      border-bottom: none;
-    }
-    :deep(.ant-tabs-nav-container-scrolling) {
-      padding-right: 40px;
-      padding-left: 40px;
-    }
-    :deep(.ant-tabs-tab-prev-icon::before) {
-      position: relative;
-      left: 6px;
-    }
-    :deep(.ant-tabs-tab-next-icon::before) {
-      position: relative;
-      right: 6px;
-    }
-    :deep(.ant-tabs-tab-active h4) {
-      //color: @primary-color;
-    }
-
+    border-bottom: none;
+  }
+  :deep(.ant-tabs-nav-container-scrolling) {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  :deep(.ant-tabs-tab-prev-icon::before) {
+    position: relative;
+    left: 6px;
+  }
+  :deep(.ant-tabs-tab-next-icon::before) {
+    position: relative;
+    right: 6px;
+  }
 }
 </style>

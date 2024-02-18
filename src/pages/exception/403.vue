@@ -17,7 +17,7 @@ function back() {
   </a-result>
 </template>
 <!-- <script setup lang="ts">
-import { useLoading } from '@/composables/base-loading'
+import { useLoading } from '::/composables/base-loading'
 
 const loading = ref(false)
 const full = ref(false)

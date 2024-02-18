@@ -3,7 +3,7 @@ import { pick } from '@v-c/utils'
 import BasicLayout from './basic-layout/index.vue'
 import SettingDrawer from './components/setting-drawer/index.vue'
 import MultiTab from './multi-tab/index.vue'
-import { animationNameList } from '~@/config/default-setting'
+import { animationNameList } from '::/config/default-setting'
 
 defineOptions({
   name: 'ProLayout',

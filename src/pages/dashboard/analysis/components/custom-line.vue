@@ -33,7 +33,3 @@ onMounted(() => {
 <template>
   <div ref="container" />
 </template>
-
-<style scoped lang="less">
-
-</style>

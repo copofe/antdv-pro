@@ -7,7 +7,3 @@ import { GithubOutlined } from '@ant-design/icons-vue'
     <GithubOutlined />
   </a>
 </template>
-
-<style scoped lang="less">
-
-</style>
