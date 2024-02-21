@@ -67,12 +67,17 @@
     "toml"
   ],
   "i18n-ally.localesPaths": [
-    "src/locales",
-    "src/locales/lang",
+    "src/locales/lang/global",
+    "src/locales/lang/pages",
     "src/pages/common/locales"
   ],
+  "i18n-ally.enabledParsers": ["ts"],
+  "i18n-ally.parsers.typescript.compilerOptions": {
+    "moduleResolution": "node"
+  },
   "files.associations": {
     "*.css": "tailwindcss"
   },
-  "files.eol": "\n"
+  "files.eol": "\n",
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

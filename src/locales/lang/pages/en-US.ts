@@ -1,5 +1,5 @@
 export default {
-  //  result page
+  // result page
   'result.success.title': 'Submission Success',
   'result.success.description':
         'The submission results page is used to feed back the results of a series of operational tasks. If it is a simple operation, use the Message global prompt feedback. This text area can show a simple supplementary explanation. If there is a similar requirement for displaying “documents”, the following gray area can present more complicated content.',
