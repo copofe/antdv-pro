@@ -20,7 +20,7 @@ export default {
   colorWeak: false,
   colorGray: false,
   multiTab: true,
-  multiTabFixed: false,
+  multiTabFixed: true,
   keepAlive: true,
   accordionMode: false,
   leftCollapsed: true,

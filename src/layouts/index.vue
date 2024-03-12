@@ -59,11 +59,6 @@ const layoutProps = computed(() =>
       <div class="flex items-center gap-6">
         <UserAvatar />
         <SelectLang />
-        <GithubLink />
-        <template v-if="!isMobile">
-          <GiteeLink />
-          <DocLink />
-        </template>
       </div>
     </template>
     <template #contentPrefix>
