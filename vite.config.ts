@@ -28,12 +28,12 @@ export default defineConfig(({ mode }) => {
           'pinia',
         ],
         dts: 'types/auto-imports.d.ts',
-        dirs: ['src/stores', 'src/composables'],
+        dirs: ['src/view/stores', 'src/view/composables'],
       }),
       Components({
         resolvers: [AntdvResolver()],
         dts: 'types/components.d.ts',
-        dirs: ['src/components'],
+        dirs: ['src/view/components'],
       }),
     ],
     resolve: {

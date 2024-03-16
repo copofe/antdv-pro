@@ -5,9 +5,9 @@ export default {
   darkMode: ['class'],
 
   content: [
-    './src/**/*.vue',
-    './src/components/**/*.{ts,tsx}',
-    './src/styles/*.css',
+    './src/view/**/*.vue',
+    './src/view/components/**/*.{ts,tsx}',
+    './src/view/styles/*.css',
   ],
 
   theme: {
